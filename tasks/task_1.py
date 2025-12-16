@@ -1,11 +1,11 @@
-from Algorithms_and_structures import parser_numbers
+from Algorithms_and_structures import parser_numbers, quick_sort_inplace
 
 
 def minimal_number_of_points(arr: list[int], shift: int) -> int:
     if not arr:
         return 0
 
-    arr.sort()
+    quick_sort_inplace(arr)
     groups = 0
     i = 0
     while i < len(arr):  # Проверяем не вышли ли за предел массива
